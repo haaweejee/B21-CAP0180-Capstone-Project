@@ -10,74 +10,57 @@
         android:id="@+id/imageView"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/ic_portrait"
+        android:contentDescription="@string/tumor_photo"
+        android:background="@color/black"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPhoto"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/lora_bold"
+        android:text="@string/take_photo"
+        android:textSize="12sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_camera"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPhoto"
-            android:layout_width="170dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/lora_bold"
-            android:text="Ambil Photo"
-            android:textSize="12sp"
-            app:cornerRadius="10dp"
-            app:icon="@drawable/ic_camera" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFile"
-            android:layout_width="170dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/lora_bold"
-            android:text="File Manager"
-            app:cornerRadius="10dp"
-            android:textSize="12sp"
-            app:icon="@drawable/ic_folder" />
-    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFile"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/lora_bold"
+        android:text="@string/take_from_file"
+        android:textSize="12sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_folder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpload"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="25dp"
         android:fontFamily="@font/lora_bold"
-        android:text="Lakukan Pengecekan Tumor"
+        android:text="@string/checking_the_tumor"
         android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:cornerRadius="10dp"
         app:icon="@drawable/ic_image_detection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFile" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
