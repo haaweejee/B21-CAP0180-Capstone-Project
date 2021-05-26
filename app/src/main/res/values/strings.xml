@@ -58,4 +58,21 @@
     <string name="tumor_photo">Tumor Photo</string>
     <string name="normal">Normal</string>
     <string name="checking_result">Hasil Pemeriksaan</string>
+
+    <string-array name="hospitals">
+        <item>RS Sari Asih Karawaci</item>
+        <item>RS Sari Asih Sangiang</item>
+        <item>RS Awal Bros Tangerang</item>
+        <item>RS Mayapada Tangerang</item>
+        <item>RS Ciputra Citra Garden City</item>
+        <item>RS Mata Aini Prof. Dr. Isak Salim</item>
+        <item>RS Umum Pusat Fatmawati</item>
+        <item>RS Mitra Keluarga Kalideres</item>
+        <item>RS Mitra Keluarga Bintaro</item>
+        <item>RS Premier Bintaro</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="thank_you">Terima Kasih</string>
+    <string name="text_pleasewait">Silahkan Tunggu Kabar dari Pihak Rumah sakit, Petugas Rumah Sakit Akan Menghubungi anda Segera.</string>
 </resources>

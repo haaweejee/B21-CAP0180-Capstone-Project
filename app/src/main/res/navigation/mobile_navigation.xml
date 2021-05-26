@@ -8,18 +8,15 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="id.bangkit2021.capstoneproject.ui.home.HomeFragment"
-        android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_detection"
         android:name="id.bangkit2021.capstoneproject.ui.detection.DetectionFragment"
-        android:label="@string/title_detection"
         tools:layout="@layout/fragment_detection" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="id.bangkit2021.capstoneproject.ui.AccountFragment"
-        android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
 </navigation>

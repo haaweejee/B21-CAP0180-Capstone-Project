@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject">
-        <activity android:name=".ui.PreferenceActivity"></activity>
+        <activity android:name=".PleaseWaitActivity" />
+        <activity android:name=".ui.PreferenceActivity" />
         <activity android:name=".ui.detection.DetailDetectionActivity" />
         <activity
             android:name=".MainActivity"
