@@ -3,6 +3,7 @@ package id.bangkit2021.capstoneproject.ui.detection
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.bangkit2021.capstoneproject.MainActivity
@@ -11,6 +12,7 @@ import id.bangkit2021.capstoneproject.data.TumorDummy
 import id.bangkit2021.capstoneproject.databinding.ActivityDetailDetectionBinding
 import id.bangkit2021.capstoneproject.ui.PreferenceActivity
 
+@Suppress("DEPRECATION")
 class DetailDetectionActivity : AppCompatActivity() {
 
     companion object{
@@ -28,6 +30,7 @@ class DetailDetectionActivity : AppCompatActivity() {
         getResult()
 
         supportActionBar?.title = getString(R.string.checking_result)
+        val byteArray = intent.getByteArrayExtra(RESULT_IMAGE)
 
         binding.btnHome.setOnClickListener{
             intent = Intent(this, MainActivity::class.java)
@@ -36,7 +39,9 @@ class DetailDetectionActivity : AppCompatActivity() {
 
         binding.btnPreference.setOnClickListener {
             intent = Intent(this, PreferenceActivity::class.java)
+            intent.putExtra(PreferenceActivity.RESULT_IMAGE, byteArray)
             startActivity(intent)
+
         }
     }
 
