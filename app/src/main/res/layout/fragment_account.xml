@@ -6,52 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".ui.AccountFragment">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageAccount"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@color/purple_200"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp"
+        style="@style/roundedImageViewRounded"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:src="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/accountName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="20dp"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+        android:fontFamily="@font/lora_bold"
+        android:maxLines="1"
+        android:text="@string/dummy_name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageAccount">
+        app:layout_constraintStart_toEndOf="@+id/imageAccount"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/accountName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NAMA AKUN GOOGLE"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/accountEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email AKUN GOOGLE"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/accountEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/dummy_email"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lora_regular"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageAccount"
+        app:layout_constraintTop_toBottomOf="@+id/accountName" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUpload"
@@ -61,11 +55,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="@font/lora_bold"
-        android:text="Logout"
+        android:text="@string/logout"
         android:textSize="12sp"
         app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageAccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

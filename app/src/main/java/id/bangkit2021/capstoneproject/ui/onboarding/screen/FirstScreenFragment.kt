@@ -3,14 +3,14 @@ package id.bangkit2021.capstoneproject.ui.onboarding.screen
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
-import id.bangkit2021.capstoneproject.MainActivity
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentFirstScreenBinding
+import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 
 
 class FirstScreenFragment : Fragment() {
@@ -29,7 +29,7 @@ class FirstScreenFragment : Fragment() {
         }
 
         binding.btnSkip.setOnClickListener {
-            val moveToHome = Intent(context, MainActivity::class.java)
+            val moveToHome = Intent(context, LoginRegisterActivity::class.java)
             startActivity(moveToHome)
             onBoardingFinished()
             activity?.finish()

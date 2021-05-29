@@ -84,4 +84,11 @@
     <string name="about_tumor">Tentang Tumor</string>
     <string name="about_tumor_desc">Penjelasan tentang tumor mengenal gejala dan pengobatan alternatif</string>
     <string name="go_login">Yuk Login</string>
+    <string name="login_register_page">Halaman Login/Register</string>
+    <string name="login_register_desc">Silahkan Login/Register Sebelum Masuk</string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="dummy_name">Hendrawan Wibowo Jatmiko</string>
+    <string name="dummy_email">hendrawanwib@gmail.com</string>
+    <string name="dummy_name_home">Halo, Hendrawan Wibowo Jatmiko</string>
+    <string name="what_you_need">Perlu Bantuan Apa?</string>
 </resources>

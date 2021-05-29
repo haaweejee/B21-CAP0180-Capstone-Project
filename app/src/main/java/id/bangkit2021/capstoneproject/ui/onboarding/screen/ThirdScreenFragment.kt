@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import id.bangkit2021.capstoneproject.MainActivity
 import id.bangkit2021.capstoneproject.databinding.FragmentThirdScreenBinding
+import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 
 
 class ThirdScreenFragment : Fragment() {
@@ -23,7 +23,7 @@ class ThirdScreenFragment : Fragment() {
         _binding = FragmentThirdScreenBinding.inflate(inflater, container, false)
 
         binding.btnFinish.setOnClickListener {
-            val intent = Intent(context, MainActivity::class.java)
+            val intent = Intent(context, LoginRegisterActivity::class.java)
             startActivity(intent)
             onBoardingFinished()
             activity?.finish()

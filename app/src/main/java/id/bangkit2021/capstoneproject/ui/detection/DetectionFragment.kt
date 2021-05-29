@@ -71,9 +71,7 @@ class DetectionFragment : Fragment() {
             //put extra Type tumor
             intentUpload.putExtra(DetailDetectionActivity.RESULT_TEXT, result[0].typeTumor)
             //send put extra to DetailDetectionActivity
-            if (binding.imageView.drawable != null){
-                startActivity(intentUpload)
-            }
+            startActivity(intentUpload)
         }
     }
 
