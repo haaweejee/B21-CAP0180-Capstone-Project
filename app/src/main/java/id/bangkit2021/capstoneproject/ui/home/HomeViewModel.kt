@@ -1,13 +1,11 @@
 package id.bangkit2021.capstoneproject.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import id.bangkit2021.capstoneproject.data.HospitalsDummy
+import id.bangkit2021.capstoneproject.data.HospitalsObject
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+    fun getHospitalsData() : List<HospitalsObject> = HospitalsDummy.generateHospitalsData()
+
 }

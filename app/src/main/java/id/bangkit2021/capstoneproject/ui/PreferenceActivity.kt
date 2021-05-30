@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package id.bangkit2021.capstoneproject.ui
 
 import android.content.Intent
@@ -40,11 +42,7 @@ class PreferenceActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        if (binding.imageView.drawable == null){
-            getImages()
-            binding.btnPutPhoto.visibility = View.GONE
-        }
-
+        getImages()
 
         supportActionBar?.title = getString(R.string.title_preference)
 
@@ -53,9 +51,12 @@ class PreferenceActivity : AppCompatActivity() {
 
     fun getImages(){
         val byteArray = intent.getByteArrayExtra(RESULT_IMAGE)
-        val bmp = BitmapFactory.decodeByteArray(byteArray,0, byteArray!!.size)
-
-        binding.imageView.setImageDrawable(BitmapDrawable(applicationContext.resources, bmp))
+        if (byteArray != null){
+            val bmp = BitmapFactory.decodeByteArray(byteArray,0, byteArray.size)
+            binding.imageView.setImageDrawable(BitmapDrawable(applicationContext.resources, bmp))
+            binding.btnPutPhoto.visibility = View.GONE
+        }
+            binding.btnPutPhoto.visibility = View.VISIBLE
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

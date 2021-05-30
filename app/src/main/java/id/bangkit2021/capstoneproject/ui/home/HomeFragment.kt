@@ -1,41 +1,71 @@
 package id.bangkit2021.capstoneproject.ui.home
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentHomeBinding
+import id.bangkit2021.capstoneproject.ui.PreferenceActivity
+import id.bangkit2021.capstoneproject.ui.about.AboutActivity
 
-class HomeFragment : Fragment() {
+@Suppress("DEPRECATION")
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
-    private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-        return binding.root
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentHomeBinding.bind(view)
+
+        imageAds()
+        loadHospitalsData()
+        binding.btnPreference.setOnClickListener {
+            val intent = Intent(context, PreferenceActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnAbout.setOnClickListener {
+            val intent = Intent(context, AboutActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun loadHospitalsData(){
+        val hospitalsViewModel =
+            ViewModelProvider(this,
+                ViewModelProvider.NewInstanceFactory())[HomeViewModel::class.java]
+        val hospitals = hospitalsViewModel.getHospitalsData()
+        val hospitalsAdapter = HorizontalAdapter()
+        hospitalsAdapter.setHospitals(hospitals)
+        with(binding.rvList){
+            layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+            setHasFixedSize(true)
+            adapter = hospitalsAdapter
+        }
+    }
+
+
+    private fun imageAds(){
+        val imageAds = ArrayList<SlideModel>()
+
+        imageAds.add(SlideModel(R.drawable.ads_1))
+        imageAds.add(SlideModel(R.drawable.ads_2))
+        imageAds.add(SlideModel(R.drawable.ads_3))
+
+        val imageSlider = activity?.findViewById<ImageSlider>(R.id.imageSlider)
+        imageSlider?.setImageList(imageAds)
     }
 
 }

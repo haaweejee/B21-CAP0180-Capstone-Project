@@ -3,12 +3,11 @@ package id.bangkit2021.capstoneproject
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.fragment.app.Fragment
 import id.bangkit2021.capstoneproject.databinding.ActivityMainBinding
+import id.bangkit2021.capstoneproject.ui.AccountFragment
+import id.bangkit2021.capstoneproject.ui.detection.DetectionFragment
+import id.bangkit2021.capstoneproject.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,23 +20,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         supportActionBar?.hide()
+        setCurrentFragment(HomeFragment())
 
+        binding.navView.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.navigation_home -> setCurrentFragment(HomeFragment())
+                R.id.navigation_detection -> setCurrentFragment(DetectionFragment())
+                R.id.navigation_profile -> setCurrentFragment(AccountFragment())
+            }
+            true
+        }
 
-        val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home,
-                R.id.navigation_detection,
-                R.id.navigation_profile
-            )
-        )
-
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
     }
+
+    private fun setCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frameLayout, fragment)
+            commit()
+        }
 
 }

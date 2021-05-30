@@ -19,7 +19,7 @@
     <!--This string is for AboutActivity -->
     <string name="about">Tentang</string>
     <string name="indication">Gejala</string>
-    <string name="treatment">Pengobatan</string>
+    <string name="treatment">Obat</string>
     <string name="risk">Resiko</string>
 
     <!-- This string is for Article -->
