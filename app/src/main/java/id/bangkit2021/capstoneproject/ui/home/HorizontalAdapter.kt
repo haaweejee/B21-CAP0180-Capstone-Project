@@ -15,6 +15,7 @@ class HorizontalAdapter : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
         this.listHospitals.clear()
         this.listHospitals.addAll(hospitals)
     }
+
     class ViewHolder(private val binding: HospitalsCardBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindHospitals(hospitals: HospitalsObject){
             with(binding){

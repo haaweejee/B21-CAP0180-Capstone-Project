@@ -31,6 +31,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         imageAds()
         loadHospitalsData()
+        loadArticleData()
         binding.btnPreference.setOnClickListener {
             val intent = Intent(context, PreferenceActivity::class.java)
             startActivity(intent)
@@ -55,6 +56,20 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             adapter = hospitalsAdapter
         }
     }
+
+    private fun loadArticleData(){
+        val articleViewModel = ViewModelProvider(this,
+            ViewModelProvider.NewInstanceFactory())[HomeViewModel::class.java]
+        val articles = articleViewModel.getArticleData()
+        val articleAdapter = LinearAdapter()
+        articleAdapter.setArticle(articles)
+        with(binding.rvArticle){
+            layoutManager = LinearLayoutManager(context)
+            setHasFixedSize(true)
+            adapter = articleAdapter
+        }
+    }
+
 
 
     private fun imageAds(){
