@@ -55,22 +55,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/textview9" />
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:tabIndicatorColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:tabTextColor="@color/white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGoogle"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="@string/login_with_google"
-        android:textColor="@color/black"
-        app:cornerRadius="20dp"
-        android:textAlignment="center"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_google"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/login_with_google"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

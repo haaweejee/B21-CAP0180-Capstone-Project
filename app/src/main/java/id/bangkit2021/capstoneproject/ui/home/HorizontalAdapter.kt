@@ -1,5 +1,6 @@
 package id.bangkit2021.capstoneproject.ui.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import id.bangkit2021.capstoneproject.data.HospitalsObject
 import id.bangkit2021.capstoneproject.databinding.HospitalsCardBinding
+import id.bangkit2021.capstoneproject.ui.hospitals.HospitalDetailActivity
 
 class HorizontalAdapter : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
     private val listHospitals = ArrayList<HospitalsObject>()
@@ -24,6 +26,11 @@ class HorizontalAdapter : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
                     .load(hospitals.hospitalsPhotoUrl)
                     .transform(RoundedCorners(20))
                     .into(photoHospitals)
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, HospitalDetailActivity::class.java)
+                    intent.putExtra(HospitalDetailActivity.HOSPITALS, hospitals)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
 

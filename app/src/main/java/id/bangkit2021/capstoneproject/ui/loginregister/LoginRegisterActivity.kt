@@ -14,6 +14,11 @@ class LoginRegisterActivity : AppCompatActivity() {
         binding = ActivityLoginRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val loginRegisterViewPager = LoginRegisterViewPager(this, supportFragmentManager)
+
+
+        binding.viewPager.adapter = loginRegisterViewPager
+        binding.tabs.setupWithViewPager(binding.viewPager)
         binding.btnGoogle.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

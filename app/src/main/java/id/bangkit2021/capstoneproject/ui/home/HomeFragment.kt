@@ -11,8 +11,10 @@ import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentHomeBinding
-import id.bangkit2021.capstoneproject.ui.PreferenceActivity
+import id.bangkit2021.capstoneproject.ui.preference.PreferenceActivity
 import id.bangkit2021.capstoneproject.ui.about.AboutActivity
+import id.bangkit2021.capstoneproject.ui.article.ArticleActivity
+import id.bangkit2021.capstoneproject.ui.hospitals.HospitalsActivity
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -39,6 +41,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         binding.btnAbout.setOnClickListener {
             val intent = Intent(context, AboutActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnHospitals.setOnClickListener {
+            val intent = Intent(context, HospitalsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnArticle.setOnClickListener {
+            val intent = Intent(context, ArticleActivity::class.java)
             startActivity(intent)
         }
     }
@@ -69,7 +80,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             adapter = articleAdapter
         }
     }
-
 
 
     private fun imageAds(){

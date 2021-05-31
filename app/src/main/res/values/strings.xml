@@ -71,6 +71,9 @@
         <item>RS Mitra Keluarga Bintaro</item>
         <item>RS Premier Bintaro</item>
     </string-array>
+
+    <string name="login">Login</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="thank_you">Terima Kasih</string>
@@ -91,4 +94,7 @@
     <string name="dummy_email">hendrawanwib@gmail.com</string>
     <string name="dummy_name_home">Halo, Hendrawan Wibowo Jatmiko</string>
     <string name="what_you_need">Perlu Bantuan Apa?</string>
+    <string name="password">Password</string>
+    <string name="name">Nama</string>
+    <string name="retype_password">Re-Type Password</string>
 </resources>

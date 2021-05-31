@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CapstoneProject">
-        <activity android:name=".ui.hospitals.HospitalsActivity"></activity>
+        <activity android:name=".ui.article.DetailArticleActivity"></activity>
+        <activity android:name=".ui.hospitals.HospitalDetailActivity" />
+        <activity android:name=".ui.article.DetailArticle" />
+        <activity android:name=".ui.article.ArticleActivity" />
+        <activity android:name=".ui.hospitals.HospitalsActivity" />
         <activity android:name=".ui.about.AboutActivity" />
         <activity android:name=".ui.loginregister.LoginRegisterActivity" />
         <activity android:name=".ui.onboarding.SplashScreenActivity">
@@ -23,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PleaseWaitActivity" />
-        <activity android:name=".ui.PreferenceActivity" />
+        <activity android:name=".ui.preference.PreferenceActivity" />
         <activity android:name=".ui.detection.DetailDetectionActivity" />
         <activity
             android:name=".MainActivity"

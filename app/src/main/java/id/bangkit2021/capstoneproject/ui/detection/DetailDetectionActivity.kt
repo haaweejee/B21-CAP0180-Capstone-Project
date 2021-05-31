@@ -3,14 +3,13 @@ package id.bangkit2021.capstoneproject.ui.detection
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import id.bangkit2021.capstoneproject.MainActivity
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.data.TumorDummy
 import id.bangkit2021.capstoneproject.databinding.ActivityDetailDetectionBinding
-import id.bangkit2021.capstoneproject.ui.PreferenceActivity
+import id.bangkit2021.capstoneproject.ui.preference.PreferenceActivity
 
 @Suppress("DEPRECATION")
 class DetailDetectionActivity : AppCompatActivity() {

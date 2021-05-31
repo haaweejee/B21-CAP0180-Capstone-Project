@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package id.bangkit2021.capstoneproject.ui
+package id.bangkit2021.capstoneproject.ui.preference
 
 import android.content.Intent
 import android.graphics.BitmapFactory

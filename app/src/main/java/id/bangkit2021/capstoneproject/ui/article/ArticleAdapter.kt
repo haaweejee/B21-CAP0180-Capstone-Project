@@ -1,4 +1,4 @@
-package id.bangkit2021.capstoneproject.ui.home
+package id.bangkit2021.capstoneproject.ui.article
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,9 +8,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import id.bangkit2021.capstoneproject.data.ArticleObject
 import id.bangkit2021.capstoneproject.databinding.ArticleCardBinding
-import id.bangkit2021.capstoneproject.ui.article.DetailArticleActivity
 
-class LinearAdapter : RecyclerView.Adapter<LinearAdapter.ViewHolder>() {
+class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
     private val listArticle = ArrayList<ArticleObject>()
 
     fun setArticle(article: List<ArticleObject>){
@@ -19,22 +18,21 @@ class LinearAdapter : RecyclerView.Adapter<LinearAdapter.ViewHolder>() {
     }
 
     class ViewHolder(private val binding: ArticleCardBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bindArticle(article: ArticleObject){
-            with(binding){
+        fun bindArticle(article: ArticleObject) {
+            with(binding) {
                 tvArticleTitle.text = article.articleName
                 tvArticleContent.text = article.articleContent
-                Glide.with(itemView.context)
-                    .load(article.articleImageUrl)
-                    .transform(RoundedCorners(20))
-                    .into(imageArticle)
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailArticleActivity::class.java)
                     intent.putExtra(DetailArticleActivity.ARTICLE, article)
                     itemView.context.startActivity(intent)
                 }
+                Glide.with(itemView.context)
+                    .load(article.articleImageUrl)
+                    .transform(RoundedCorners(20))
+                    .into(imageArticle)
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -47,5 +45,5 @@ class LinearAdapter : RecyclerView.Adapter<LinearAdapter.ViewHolder>() {
         holder.bindArticle(article)
     }
 
-    override fun getItemCount(): Int = 3
+    override fun getItemCount(): Int = listArticle.size
 }

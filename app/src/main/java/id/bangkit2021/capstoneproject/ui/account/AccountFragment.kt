@@ -1,4 +1,4 @@
-package id.bangkit2021.capstoneproject.ui
+package id.bangkit2021.capstoneproject.ui.account
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentAccountBinding
 import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 

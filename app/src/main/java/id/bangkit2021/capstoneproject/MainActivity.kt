@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import id.bangkit2021.capstoneproject.databinding.ActivityMainBinding
-import id.bangkit2021.capstoneproject.ui.AccountFragment
+import id.bangkit2021.capstoneproject.ui.account.AccountFragment
 import id.bangkit2021.capstoneproject.ui.detection.DetectionFragment
 import id.bangkit2021.capstoneproject.ui.home.HomeFragment
 
