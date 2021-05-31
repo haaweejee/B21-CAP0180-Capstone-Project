@@ -14,7 +14,6 @@
         android:theme="@style/Theme.CapstoneProject">
         <activity android:name=".ui.article.DetailArticleActivity"></activity>
         <activity android:name=".ui.hospitals.HospitalDetailActivity" />
-        <activity android:name=".ui.article.DetailArticle" />
         <activity android:name=".ui.article.ArticleActivity" />
         <activity android:name=".ui.hospitals.HospitalsActivity" />
         <activity android:name=".ui.about.AboutActivity" />

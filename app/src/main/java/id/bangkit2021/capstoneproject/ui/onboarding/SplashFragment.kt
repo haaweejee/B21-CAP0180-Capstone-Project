@@ -16,19 +16,24 @@ import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 
 class SplashFragment : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
         Handler(Looper.getMainLooper()).postDelayed({
-            if (onBoardingFinished()) {
-                val homeIntent = Intent(context, LoginRegisterActivity::class.java)
-                startActivity(homeIntent)
-                activity?.finish()
-            } else {
-                findNavController().navigate(R.id.action_splashFragment2_to_viewPagerFragment)
-            }
+                if (onBoardingFinished()) {
+                    val loginIntent = Intent(context, LoginRegisterActivity::class.java)
+                    startActivity(loginIntent)
+                    activity?.finish()
+                } else {
+                    findNavController().navigate(R.id.action_splashFragment2_to_viewPagerFragment)
+                }
         }, 3000)
+
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)

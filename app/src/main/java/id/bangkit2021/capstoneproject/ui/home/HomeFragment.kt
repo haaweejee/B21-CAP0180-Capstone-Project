@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
+import com.google.firebase.auth.FirebaseAuth
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentHomeBinding
 import id.bangkit2021.capstoneproject.ui.preference.PreferenceActivity
@@ -21,6 +22,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var mAuth : FirebaseAuth
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -31,6 +33,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHomeBinding.bind(view)
 
+        mAuth = FirebaseAuth.getInstance()
+        val currentUser = mAuth.currentUser
+
+        binding.textName.text = String.format(getString(R.string.hello), currentUser?.displayName)
         imageAds()
         loadHospitalsData()
         loadArticleData()

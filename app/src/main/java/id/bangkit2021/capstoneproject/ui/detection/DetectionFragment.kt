@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import id.bangkit2021.capstoneproject.databinding.FragmentDetectionBinding
 import id.bangkit2021.capstoneproject.tflite.Classifier
 import id.bangkit2021.capstoneproject.utils.Constant
+import org.tensorflow.lite.Interpreter
 import java.io.ByteArrayOutputStream
 
 
@@ -27,6 +28,9 @@ class DetectionFragment : Fragment() {
     private val mModelPath = Constant.TFLITE_FILE
     private val mLabelPath = Constant.TFLITE_LABEL
     private lateinit var classifier: Classifier
+    private lateinit var interpreter: Interpreter
+
+
 
 
     override fun onCreateView(

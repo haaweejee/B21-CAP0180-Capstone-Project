@@ -11,7 +11,7 @@
 
     <!--This String to give a button or text a String -->
     <string name="show_all">Lihat Semua</string>
-    <string name="hello">Hallo, </string>
+    <string name="hello">Hallo, %s </string>
     <string name="what_do_you_need">Perlu Bantuan apa?</string>
     <string name="search_hospitals">Cari Rumah Sakit</string>
     <string name="logout">Keluar</string>
