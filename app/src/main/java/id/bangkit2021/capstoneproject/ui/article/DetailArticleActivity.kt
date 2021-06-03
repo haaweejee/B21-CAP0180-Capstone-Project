@@ -25,6 +25,9 @@ class DetailArticleActivity : AppCompatActivity() {
         //Get intent Parceable
         val article = intent.getParcelableExtra<ArticleObject>(ARTICLE)
 
+        //set Actionbar Title
+        supportActionBar?.title = article?.articleName
+
         //set Article name, Content and image
         binding.articleName.text = article?.articleName
         binding.articleContent.text = article?.articleContent

@@ -1,6 +1,9 @@
 package id.bangkit2021.capstoneproject.ui.hospitals
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import id.bangkit2021.capstoneproject.data.HospitalsObject
@@ -29,6 +32,21 @@ class HospitalDetailActivity : AppCompatActivity() {
             .load(hospitals?.hospitalsPhotoUrl)
             .into(binding.imageHospitals)
 
+        binding.btnRute.setOnClickListener {
+            Toast.makeText(this, "Fitur sedang dikembangkan", Toast.LENGTH_SHORT).show()
+        }
 
+        binding.btnWeb.setOnClickListener {
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(hospitals?.hospitalsWeb)
+            startActivity(intent)
+        }
+
+        binding.btnTelphone.setOnClickListener {
+            intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + hospitals?.hospitalsTelephone))
+            startActivity(intent)
+        }
     }
+
+
 }

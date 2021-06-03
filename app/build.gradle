@@ -56,6 +56,9 @@ dependencies {
     //Progress bar Spinkit
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
 
+    //Image Cirlceview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     //TensorFlow
     implementation 'org.tensorflow:tensorflow-lite:2.4.0'
     implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
