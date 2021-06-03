@@ -8,3 +8,7 @@ There are 4 labels, namely:
 2. glioma_tumor = Glioma tumor
 3. pituiry_tumor = Hypothesis Tumor
 4. meninglomia_tumor = Malignant Tumor
+
+for the model you can look at : https://github.com/haaweejee/B21-CAP0180-Capstone-Project/tree/machinelearning/machine-learning-model
+for the Application source code at : https://github.com/haaweejee/B21-CAP0180-Capstone-Project/tree/finish
+for the Application Apk 
