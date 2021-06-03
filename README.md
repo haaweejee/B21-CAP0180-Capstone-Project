@@ -11,4 +11,4 @@ There are 4 labels, namely:
 
 for the model you can look at : https://github.com/haaweejee/B21-CAP0180-Capstone-Project/tree/machinelearning/machine-learning-model
 for the Application source code at : https://github.com/haaweejee/B21-CAP0180-Capstone-Project/tree/finish
-for the Application Apk 
+for the Application Apk at : https://drive.google.com/file/d/1YkBCgxihwig2JSSFGaxbdVQ3ysytp9kD/view?usp=sharing
