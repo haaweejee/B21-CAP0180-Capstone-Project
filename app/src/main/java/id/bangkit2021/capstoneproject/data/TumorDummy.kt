@@ -2,7 +2,7 @@ package id.bangkit2021.capstoneproject.data
 
 object TumorDummy {
     fun getTumorData(): List<TumorData> {
-        val tumorData : ArrayList<TumorData> = ArrayList()
+        val tumorData: ArrayList<TumorData> = ArrayList()
         return tumorData.apply {
             add(
                 TumorData(

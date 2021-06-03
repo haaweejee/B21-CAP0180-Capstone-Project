@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -25,11 +28,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PleaseWaitActivity" />
+        <activity android:name=".ui.pleasewait.PleaseWaitActivity" />
         <activity android:name=".ui.preference.PreferenceActivity" />
         <activity android:name=".ui.detection.DetailDetectionActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name" />
 
         <provider

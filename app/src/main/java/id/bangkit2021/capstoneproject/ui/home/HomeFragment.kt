@@ -12,17 +12,17 @@ import com.denzcoskun.imageslider.models.SlideModel
 import com.google.firebase.auth.FirebaseAuth
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.FragmentHomeBinding
-import id.bangkit2021.capstoneproject.ui.preference.PreferenceActivity
 import id.bangkit2021.capstoneproject.ui.about.AboutActivity
 import id.bangkit2021.capstoneproject.ui.article.ArticleActivity
 import id.bangkit2021.capstoneproject.ui.hospitals.HospitalsActivity
+import id.bangkit2021.capstoneproject.ui.preference.PreferenceActivity
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var mAuth : FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -60,27 +60,31 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun loadHospitalsData(){
+    private fun loadHospitalsData() {
         val hospitalsViewModel =
-            ViewModelProvider(this,
-                ViewModelProvider.NewInstanceFactory())[HomeViewModel::class.java]
+            ViewModelProvider(
+                this,
+                ViewModelProvider.NewInstanceFactory()
+            )[HomeViewModel::class.java]
         val hospitals = hospitalsViewModel.getHospitalsData()
         val hospitalsAdapter = HorizontalAdapter()
         hospitalsAdapter.setHospitals(hospitals)
-        with(binding.rvList){
+        with(binding.rvList) {
             layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
             setHasFixedSize(true)
             adapter = hospitalsAdapter
         }
     }
 
-    private fun loadArticleData(){
-        val articleViewModel = ViewModelProvider(this,
-            ViewModelProvider.NewInstanceFactory())[HomeViewModel::class.java]
+    private fun loadArticleData() {
+        val articleViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[HomeViewModel::class.java]
         val articles = articleViewModel.getArticleData()
         val articleAdapter = LinearAdapter()
         articleAdapter.setArticle(articles)
-        with(binding.rvArticle){
+        with(binding.rvArticle) {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter = articleAdapter
@@ -88,7 +92,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
 
-    private fun imageAds(){
+    private fun imageAds() {
         val imageAds = ArrayList<SlideModel>()
 
         imageAds.add(SlideModel(R.drawable.ads_1))

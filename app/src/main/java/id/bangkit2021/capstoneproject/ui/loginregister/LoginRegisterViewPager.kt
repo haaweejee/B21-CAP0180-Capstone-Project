@@ -10,8 +10,9 @@ import androidx.fragment.app.FragmentPagerAdapter
 import id.bangkit2021.capstoneproject.R
 
 
-class LoginRegisterViewPager(private val context: Context, fm: FragmentManager ) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-    companion object{
+class LoginRegisterViewPager(private val context: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(
             R.string.login,
@@ -22,7 +23,7 @@ class LoginRegisterViewPager(private val context: Context, fm: FragmentManager )
     override fun getCount(): Int = TAB_TITLES.size
 
     override fun getItem(position: Int): Fragment =
-        when(position){
+        when (position) {
             0 -> LoginFragment()
             1 -> RegisterFragment()
             else -> Fragment()

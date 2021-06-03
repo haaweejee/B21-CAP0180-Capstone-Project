@@ -10,9 +10,11 @@ import androidx.fragment.app.FragmentPagerAdapter
 import id.bangkit2021.capstoneproject.R
 
 @Suppress("DEPRECATION")
-class SectionPagerAdapter(private val context: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class SectionPagerAdapter(private val context: Context, fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    companion object{
+    //Set Tab Titles for About Activity
+    companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(
             R.string.about,
@@ -22,10 +24,12 @@ class SectionPagerAdapter(private val context: Context, fm: FragmentManager) : F
         )
     }
 
+    //For Tab titles size
     override fun getCount(): Int = TAB_TITLES.size
 
+    //For call Fragment with the Index
     override fun getItem(position: Int): Fragment =
-        when(position){
+        when (position) {
             0 -> TumorFragment()
             1 -> IndicationFragment()
             2 -> TreatmentFragment()
@@ -33,6 +37,8 @@ class SectionPagerAdapter(private val context: Context, fm: FragmentManager) : F
             else -> Fragment()
         }
 
-    override fun getPageTitle(position: Int): CharSequence = context.resources.getString(TAB_TITLES[position])
+    //Get Tabs Title
+    override fun getPageTitle(position: Int): CharSequence =
+        context.resources.getString(TAB_TITLES[position])
 
 }

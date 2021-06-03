@@ -11,5 +11,5 @@ data class HospitalsObject(
     var hospitalsAddress: String,
     var hospitalsTelephone: String,
     var hospitalsRute: String,
-    var hospitalsWeb : String,
-):Parcelable
+    var hospitalsWeb: String,
+) : Parcelable

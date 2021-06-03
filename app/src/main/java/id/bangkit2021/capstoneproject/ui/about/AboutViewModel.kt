@@ -5,5 +5,6 @@ import id.bangkit2021.capstoneproject.data.AboutDummy
 import id.bangkit2021.capstoneproject.data.AboutObject
 
 class AboutViewModel : ViewModel() {
-    fun getAboutData() : List<AboutObject> = AboutDummy.generateAboutData()
+    //Call Dummy Data to ViewModel
+    fun getAboutData(): List<AboutObject> = AboutDummy.generateAboutData()
 }

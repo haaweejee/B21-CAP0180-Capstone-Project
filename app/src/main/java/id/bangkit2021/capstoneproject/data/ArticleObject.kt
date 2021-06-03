@@ -12,4 +12,4 @@ data class ArticleObject(
     var articleImageUrl: String,
     var articleEditor: String,
     var articleWriter: String
-):Parcelable
+) : Parcelable

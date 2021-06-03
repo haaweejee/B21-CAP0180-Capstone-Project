@@ -13,7 +13,7 @@ import id.bangkit2021.capstoneproject.ui.onboarding.screen.ThirdScreenFragment
 
 class ViewPagerFragment : Fragment() {
 
-    private var _binding : FragmentViewPagerBinding? = null
+    private var _binding: FragmentViewPagerBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(

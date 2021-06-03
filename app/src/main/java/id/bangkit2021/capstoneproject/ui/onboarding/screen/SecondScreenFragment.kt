@@ -15,7 +15,7 @@ import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 
 class SecondScreenFragment : Fragment() {
 
-    private var _binding : FragmentSecondScreenBinding? = null
+    private var _binding: FragmentSecondScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -39,7 +39,7 @@ class SecondScreenFragment : Fragment() {
         return binding.root
     }
 
-    private fun onBoardingFinished(){
+    private fun onBoardingFinished() {
         val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putBoolean("Finished", true)

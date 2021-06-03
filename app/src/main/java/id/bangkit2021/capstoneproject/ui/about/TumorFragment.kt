@@ -11,7 +11,8 @@ import id.bangkit2021.capstoneproject.databinding.FragmentTumorBinding
 
 
 class TumorFragment : Fragment() {
-    private var _binding : FragmentTumorBinding? = null
+    //
+    private var _binding: FragmentTumorBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,10 +26,14 @@ class TumorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val aboutViewModel = ViewModelProvider(requireActivity(),
-            ViewModelProvider.NewInstanceFactory())[AboutViewModel::class.java]
+        //Call AboutViewModel
+        val aboutViewModel = ViewModelProvider(
+            requireActivity(),
+            ViewModelProvider.NewInstanceFactory()
+        )[AboutViewModel::class.java]
         val aboutTumor = aboutViewModel.getAboutData()
+
+        //Set title content and image index 0 : About Tumor
         binding.tvTitle.text = aboutTumor[0].title
         binding.tvContent.text = aboutTumor[0].content
         Glide.with(this)

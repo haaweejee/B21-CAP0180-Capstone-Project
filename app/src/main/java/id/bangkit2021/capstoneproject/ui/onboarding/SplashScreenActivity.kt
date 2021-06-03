@@ -1,7 +1,7 @@
 package id.bangkit2021.capstoneproject.ui.onboarding
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import id.bangkit2021.capstoneproject.R
 
 class SplashScreenActivity : AppCompatActivity() {

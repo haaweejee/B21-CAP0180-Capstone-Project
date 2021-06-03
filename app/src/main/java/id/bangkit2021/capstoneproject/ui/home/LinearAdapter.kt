@@ -13,14 +13,15 @@ import id.bangkit2021.capstoneproject.ui.article.DetailArticleActivity
 class LinearAdapter : RecyclerView.Adapter<LinearAdapter.ViewHolder>() {
     private val listArticle = ArrayList<ArticleObject>()
 
-    fun setArticle(article: List<ArticleObject>){
+    fun setArticle(article: List<ArticleObject>) {
         this.listArticle.clear()
         this.listArticle.addAll(article)
     }
 
-    class ViewHolder(private val binding: ArticleCardBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bindArticle(article: ArticleObject){
-            with(binding){
+    class ViewHolder(private val binding: ArticleCardBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bindArticle(article: ArticleObject) {
+            with(binding) {
                 tvArticleTitle.text = article.articleName
                 tvArticleContent.text = article.articleContent
                 Glide.with(itemView.context)

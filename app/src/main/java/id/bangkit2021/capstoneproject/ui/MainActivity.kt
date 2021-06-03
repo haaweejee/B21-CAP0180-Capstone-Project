@@ -1,9 +1,10 @@
-package id.bangkit2021.capstoneproject
+package id.bangkit2021.capstoneproject.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.ActivityMainBinding
 import id.bangkit2021.capstoneproject.ui.account.AccountFragment
 import id.bangkit2021.capstoneproject.ui.detection.DetectionFragment
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setCurrentFragment(HomeFragment())
 
         binding.navView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 R.id.navigation_home -> setCurrentFragment(HomeFragment())
                 R.id.navigation_detection -> setCurrentFragment(DetectionFragment())
                 R.id.navigation_profile -> setCurrentFragment(AccountFragment())

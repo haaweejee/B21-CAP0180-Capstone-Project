@@ -13,14 +13,15 @@ import id.bangkit2021.capstoneproject.ui.hospitals.HospitalDetailActivity
 class HorizontalAdapter : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
     private val listHospitals = ArrayList<HospitalsObject>()
 
-    fun setHospitals(hospitals: List<HospitalsObject>){
+    fun setHospitals(hospitals: List<HospitalsObject>) {
         this.listHospitals.clear()
         this.listHospitals.addAll(hospitals)
     }
 
-    class ViewHolder(private val binding: HospitalsCardBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bindHospitals(hospitals: HospitalsObject){
-            with(binding){
+    class ViewHolder(private val binding: HospitalsCardBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bindHospitals(hospitals: HospitalsObject) {
+            with(binding) {
                 textNameHospitals.text = hospitals.hospitalsName
                 Glide.with(itemView.context)
                     .load(hospitals.hospitalsPhotoUrl)
@@ -37,7 +38,8 @@ class HorizontalAdapter : RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = HospitalsCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            HospitalsCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

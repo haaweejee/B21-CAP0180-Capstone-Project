@@ -13,7 +13,7 @@ import id.bangkit2021.capstoneproject.ui.loginregister.LoginRegisterActivity
 
 class ThirdScreenFragment : Fragment() {
 
-    private var _binding : FragmentThirdScreenBinding? = null
+    private var _binding: FragmentThirdScreenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -32,7 +32,7 @@ class ThirdScreenFragment : Fragment() {
         return binding.root
     }
 
-    private fun onBoardingFinished(){
+    private fun onBoardingFinished() {
         val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         val editor = sharedPref.edit()
         editor.putBoolean("Finished", true)

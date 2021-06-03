@@ -1,15 +1,14 @@
 package id.bangkit2021.capstoneproject.ui.hospitals
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.data.HospitalsObject
 import id.bangkit2021.capstoneproject.databinding.ActivityHospitalDetailBinding
 
 class HospitalDetailActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val HOSPITALS = "hospitals"
     }
 
@@ -29,7 +28,6 @@ class HospitalDetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load(hospitals?.hospitalsPhotoUrl)
             .into(binding.imageHospitals)
-
 
 
     }

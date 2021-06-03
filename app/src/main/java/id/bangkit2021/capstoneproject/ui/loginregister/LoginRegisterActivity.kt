@@ -12,20 +12,20 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import id.bangkit2021.capstoneproject.MainActivity
+import id.bangkit2021.capstoneproject.ui.MainActivity
 import id.bangkit2021.capstoneproject.R
 import id.bangkit2021.capstoneproject.databinding.ActivityLoginRegisterBinding
 
 class LoginRegisterActivity : AppCompatActivity() {
 
 
-    companion object{
+    companion object {
         private const val RC_SIGN_IN = 301
     }
 
-    private lateinit var mAuth : FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var binding : ActivityLoginRegisterBinding
+    private lateinit var binding: ActivityLoginRegisterBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginRegisterBinding.inflate(layoutInflater)
@@ -67,7 +67,7 @@ class LoginRegisterActivity : AppCompatActivity() {
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             val exception = task.exception
-            if (task.isSuccessful){
+            if (task.isSuccessful) {
                 try {
                     // Google Sign In was successful, authenticate with Firebase
                     val account = task.getResult(ApiException::class.java)!!
@@ -76,8 +76,8 @@ class LoginRegisterActivity : AppCompatActivity() {
                 } catch (e: ApiException) {
                     Log.w("SignActivity", "Google sign in failed", e)
                 }
-            }else{
-                Log.w("SignActivity",  exception.toString())
+            } else {
+                Log.w("SignActivity", exception.toString())
             }
         }
     }

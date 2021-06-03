@@ -1,6 +1,7 @@
 package id.bangkit2021.capstoneproject.ui.hospitals
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,15 +11,25 @@ import id.bangkit2021.capstoneproject.data.HospitalsObject
 import id.bangkit2021.capstoneproject.databinding.HospitalCardListBinding
 
 class HospitalsAdapter : RecyclerView.Adapter<HospitalsAdapter.ViewHolder>() {
-    private val listHospitals = ArrayList<HospitalsObject>()
+    private var listHospitals = ArrayList<HospitalsObject>()
 
-    fun setHospitals(hospitals: List<HospitalsObject>){
+    fun setHospitals(hospitals: List<HospitalsObject>) {
         this.listHospitals.clear()
         this.listHospitals.addAll(hospitals)
     }
-    class ViewHolder(private val binding: HospitalCardListBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bindHospitals(hospitals: HospitalsObject){
-            with(binding){
+
+    fun searchHospitals(hospitals: ArrayList<HospitalsObject>){
+        this.listHospitals = hospitals
+        Log.d("Search Result", hospitals.toString())
+        notifyDataSetChanged()
+    }
+
+
+
+    class ViewHolder(private val binding: HospitalCardListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bindHospitals(hospitals: HospitalsObject) {
+            with(binding) {
                 textNameHospitals.text = hospitals.hospitalsName
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, HospitalDetailActivity::class.java)
@@ -35,7 +46,8 @@ class HospitalsAdapter : RecyclerView.Adapter<HospitalsAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = HospitalCardListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            HospitalCardListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 

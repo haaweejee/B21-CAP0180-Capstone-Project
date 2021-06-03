@@ -28,9 +28,6 @@ class DetectionFragment : Fragment() {
     private val mModelPath = Constant.TFLITE_FILE
     private val mLabelPath = Constant.TFLITE_LABEL
     private lateinit var classifier: Classifier
-    private lateinit var interpreter: Interpreter
-
-
 
 
     override fun onCreateView(
