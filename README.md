@@ -37,5 +37,17 @@ After that we Start to create UI and Serverside for Android Application The Tool
 For Library We use in Project :
 
 [TensorFlow Lite](https://www.tensorflow.org/lite/guide/android/ "TensorFlow Lite")
+
 [Firebase Service](https://firebase.google.com/docs "Firebase Service")
 
+[Android-Spinkit](https://github.com/ybq/Android-SpinKit "Spin kit Progressbar)
+
+[Glide Image Loader](https://github.com/bumptech/glide "Glide Image Loader")
+
+[ImageSlideShow](https://github.com/denzcoskun/ImageSlideshow "ImageSlideShow")
+
+[Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started "Navigation Component")
+
+[Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "Lifecycle")
+
+[Google Material[https://material.io/develop/android/docs/getting-started "Google Material")
