@@ -50,4 +50,4 @@ For Library We use in Project :
 
 [Lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "Lifecycle")
 
-[Google Material[https://material.io/develop/android/docs/getting-started "Google Material")
+[Google Material](https://material.io/develop/android/docs/getting-started "Google Material")
