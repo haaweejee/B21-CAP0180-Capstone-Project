@@ -8,6 +8,9 @@ The Member of Team :
 
 First We Create a Userflow, Wifeframe Lofi, Wifeframe Hifi Using Figma :
 
+!["https://www.figma.com/"](https://user-images.githubusercontent.com/52823787/120881660-e9361c00-c5fc-11eb-9615-4bdb0d156edb.png)
+
+
 Userflow :
 https://www.figma.com/file/EKJqfHBc6DB3wCLTAyKLfM/Capstone?node-id=27%3A11
 
@@ -17,4 +20,21 @@ https://www.figma.com/file/EKJqfHBc6DB3wCLTAyKLfM/Capstone?node-id=83%3A11
 Wifeframe Hifi:
 https://www.figma.com/file/EKJqfHBc6DB3wCLTAyKLfM/Capstone?node-id=105%3A141
 
-After that we Start to create UI and Serverside for Android Application The Libary We use 
+The Resource we using in figma is :
+
+[Google Font](https://fonts.google.com/ "Google Font")
+
+[Flat Icon](https://www.flaticon.com/ "Flaticon")
+
+[Canva](https://www.canva.com/ "Canva")
+
+After that we Start to create UI and Serverside for Android Application The Tools we Use Android Studio v4.2, Using Kotlin Programming Language.
+
+[Android Studio](https://developer.android.com/studio/ "Android Studio")
+
+[Kotlin](https://kotlinlang.org/ "Kotlin")
+
+For Library We use in Project :
+
+[TensorFlow Lite](https://www.tensorflow.org/lite/guide/android/ "TensorFlowLite")
+[M
