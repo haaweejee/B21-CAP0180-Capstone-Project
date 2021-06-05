@@ -1,4 +1,4 @@
-# B21-CAP0180-Capstone-Project
+# Mobile Docummentation
 
 This Readme Focus On What We Use To Deploy For Android Apps Hope You Can Learn It And It's Not For Public Please Don't Share Anywhere
 
@@ -36,5 +36,6 @@ After that we Start to create UI and Serverside for Android Application The Tool
 
 For Library We use in Project :
 
-[TensorFlow Lite](https://www.tensorflow.org/lite/guide/android/ "TensorFlowLite")
-[M
+[TensorFlow Lite](https://www.tensorflow.org/lite/guide/android/ "TensorFlow Lite")
+[Firebase Service](https://firebase.google.com/docs "Firebase Service")
+
